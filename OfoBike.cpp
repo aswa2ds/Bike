@@ -11,6 +11,8 @@ OfoBike::OfoBike(const char *id, int locationX, int locationY, int comfortRating
     x = locationX;
     y = locationY;
     comfort = comfortRating;
+    costPerHour = 2;
+    speed = 25;
 }
 
 bool OfoBike::unlock() {
@@ -28,11 +30,23 @@ bool OfoBike::unlock() {
 int OfoBike::lock() {
     if(occupied){
         occupied = false;
-
+        distance = 0;
+        cout << "lock " << serial << endl;
+        return cost;
+    }
+    else{
+        cout << serial << " has been locked" << endl;
+        return -1;
     }
 }
 
 int OfoBike::compute_cost() {
-    int time = distance / 25;
+    time = ceil((float)distance/(float)speed);
+    cost = time * costPerHour;
+    if(cost <= 7)
+        cost = 0;
+    else
+        cost -= 7;
+    return cost;
 }
 

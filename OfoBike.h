@@ -7,7 +7,12 @@
 
 #include "Bike.h"
 
-class OfoBike : protected Bike {
+class OfoBike : public Bike {
+private:
+    int costPerHour;
+    int cost;
+    int speed;
+    int time;
 public:
     OfoBike(const char* id, int locationX, int locationY, int comfortRating);
     bool unlock() override;

@@ -1,7 +1,8 @@
 #include <iostream>
 #include "Bike.h"
+#include "OfoBike.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    Bike *tempBike = new OfoBike("ofo10", 40, 15, 4);
+
 }

@@ -16,9 +16,9 @@ bool Bike::unlock() {
 int Bike::lock() {
     if(occupied){
         occupied = false;
-        int dist = distance;
+        int cost = compute_cost();
         distance = 0;
-        return dist;
+        return cost;
     }
     else
         return -1;
