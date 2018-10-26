@@ -30,9 +30,9 @@ bool OfoBike::unlock() {
 int OfoBike::lock() {
     if(occupied){
         occupied = false;
-        distance = 0;
         cout << "lock " << serial << endl;
-        return cost;
+
+        return compute_cost();
     }
     else{
         cout << serial << " has been locked" << endl;
@@ -41,12 +41,11 @@ int OfoBike::lock() {
 }
 
 int OfoBike::compute_cost() {
-    time = ceil((float)distance/(float)speed);
+    time = (int)ceil((float)distance/(float)speed);
     cost = time * costPerHour;
-    if(cost <= 7)
-        cost = 0;
-    else
+    if(cost >= 7)
         cost -= 7;
+    distance = 0;
     return cost;
 }
 
