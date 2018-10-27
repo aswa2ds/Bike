@@ -45,6 +45,8 @@ int OfoBike::compute_cost() {
     cost = time * costPerHour;
     if(cost >= 7)
         cost -= 7;
+    else
+        cost = 0;
     distance = 0;
     return cost;
 }
