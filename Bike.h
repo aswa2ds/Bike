@@ -24,6 +24,9 @@ public:
     virtual int lock();
     int move_to(int destinationX, int destinationY);
     virtual int compute_cost();
+    int getDistance(int userX, int userY);
+    bool better(int acceptableComfort);
+    const char *getSerial();
 };
 
 

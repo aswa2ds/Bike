@@ -36,3 +36,15 @@ int Bike::compute_cost(){
     int cost  = 1;
     return distance * cost;
 }
+
+int Bike::getDistance(int userX, int userY) {
+    return abs(userX - x) + abs(userY - y);
+}
+
+bool Bike::better(int acceptableComfort) {
+    return comfort >= acceptableComfort;
+}
+
+const char* Bike::getSerial() {
+    return serial;
+}
