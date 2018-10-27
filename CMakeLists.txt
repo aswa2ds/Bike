@@ -3,4 +3,4 @@ project(Bike)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Bike main.cpp Bike.cpp Bike.h OfoBike.cpp OfoBike.h HelloBike.cpp HelloBike.h)
+add_executable(Bike main.cpp Bike.cpp Bike.h OfoBike.cpp OfoBike.h HelloBike.cpp HelloBike.h BikeSystem.cpp BikeSystem.h)
