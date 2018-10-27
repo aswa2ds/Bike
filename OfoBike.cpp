@@ -12,7 +12,7 @@ OfoBike::OfoBike(const char *id, int locationX, int locationY, int comfortRating
     y = locationY;
     comfort = comfortRating;
     costPerHour = 2;
-    speed = 25;
+    speed = 21;
 }
 
 bool OfoBike::unlock() {

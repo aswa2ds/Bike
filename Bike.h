@@ -27,6 +27,8 @@ public:
     int getDistance(int userX, int userY);
     bool better(int acceptableComfort);
     const char *getSerial();
+    int getComfort();
+    bool realBetter(int acceptableComfort);
 };
 
 

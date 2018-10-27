@@ -48,3 +48,11 @@ bool Bike::better(int acceptableComfort) {
 const char* Bike::getSerial() {
     return serial;
 }
+
+int Bike::getComfort() {
+    return comfort;
+}
+
+bool Bike::realBetter(int acceptableComfort) {
+    return comfort > acceptableComfort;
+}
